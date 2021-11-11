@@ -2,14 +2,22 @@ import { spring, useCurrentFrame, useVideoConfig } from 'remotion'
 import styled from '@emotion/styled'
 
 import { Root } from 'elements/Root'
-import { NerdLayerSvg, TheLayerSvg } from 'elements/svgAssets'
+import { NerdLayerSvg, TheLayerSvg, DotSvg } from 'elements/svgAssets'
 
 const StyledThe = styled(TheLayerSvg)`
   position: absolute;
 `
 
 const StyledNerd = styled(NerdLayerSvg)`
+  margin-right: 20px;
+`
+
+const NerdContainer = styled.div`
   position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
 `
 
 export type TheNerdProps = {
@@ -55,11 +63,15 @@ export const TheNerd = ({ thePostion, nerdPosition }: TheNerdProps) => {
           top: thePositionSpring,
         }}
       />
-      <StyledNerd
+
+      <NerdContainer
         style={{
           bottom: nerdPositionSpring,
         }}
-      />
+      >
+        <StyledNerd />
+        <DotSvg />
+      </NerdContainer>
     </Root>
   )
 }
