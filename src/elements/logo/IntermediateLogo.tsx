@@ -1,12 +1,7 @@
 import styled from '@emotion/styled'
-import {
-  CoolLayerSvg,
-  DotSvg,
-  NerdLayerSvg,
-  TheLayerSvg,
-} from 'elements/svgAssets'
+import { DotSvg, NerdLayerSvg, TheLayerSvg } from 'elements/svgAssets'
 
-export const CONTAINER_HEIGHT = 500
+export const CONTAINER_HEIGHT = 250
 
 const Container = styled.div`
   display: flex;
@@ -29,12 +24,11 @@ const StyledNerd = styled(NerdLayerSvg)`
   margin-right: 20px;
 `
 
-type LogoProps = { className?: string }
+type IntermediateLogoProps = { className?: string }
 
-export const Logo = ({ className }: LogoProps) => (
+export const IntermediateLogo = ({ className }: IntermediateLogoProps) => (
   <Container className={className}>
     <TheLayerSvg />
-    <CoolLayerSvg />
     <NerdContainer>
       <StyledNerd />
       <DotSvg />

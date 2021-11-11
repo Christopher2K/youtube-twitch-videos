@@ -26,7 +26,14 @@ Config.Bundling.overrideWebpackConfig((config) => {
         }),
         {
           test: /\.svg$/,
-          use: ['@svgr/webpack'],
+          use: [
+            {
+              loader: '@svgr/webpack',
+              options: {
+                ref: true,
+              },
+            },
+          ],
         },
       ],
     },

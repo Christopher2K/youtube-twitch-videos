@@ -7,10 +7,10 @@ export const RemotionVideo: React.FC = () => {
       <Composition
         id="LogoAnimation"
         component={LogoAnimation}
-        durationInFrames={60}
-        fps={30}
-        width={1280}
-        height={720}
+        durationInFrames={60 * 10}
+        fps={60}
+        width={1920}
+        height={1080}
       />
     </>
   )
