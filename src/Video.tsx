@@ -1,12 +1,12 @@
 import { Composition } from 'remotion'
-import { MyComposition } from 'Composition'
+import { LogoAnimation } from 'compositions/LogoAnimation'
 
 export const RemotionVideo: React.FC = () => {
   return (
     <>
       <Composition
-        id="Empty"
-        component={MyComposition}
+        id="LogoAnimation"
+        component={LogoAnimation}
         durationInFrames={60}
         fps={30}
         width={1280}
