@@ -1,11 +1,12 @@
-import { useVideoConfig, Sequence } from 'remotion'
+import { useVideoConfig, Sequence, Audio } from 'remotion'
 
 import { CONTAINER_HEIGHT as FINAL_LOGO_CONTAINER_HEIGHT } from 'elements/logo/Logo'
 import { CONTAINER_HEIGHT as INTERMEDIATE_LOGO_CONTAINER_HEIGHT } from 'elements/logo/IntermediateLogo'
 import { TheNerd } from './TheNerd'
 import { Cool } from './Cool'
+import { MouseClick, Whoosh } from 'sound'
 
-export const LogoAnimation = () => {
+export const YoutubeIntro = () => {
   const { height } = useVideoConfig()
   const elementsPosition = {
     theLayerTop: {
@@ -33,6 +34,7 @@ export const LogoAnimation = () => {
             end: elementsPosition.nerdLayerBottom.intermediate,
           }}
         />
+        <Audio src={Whoosh} />
       </Sequence>
       <Sequence from={90} name="Second Stage">
         <TheNerd
@@ -48,6 +50,7 @@ export const LogoAnimation = () => {
       </Sequence>
       <Sequence from={90} name="Third stage">
         <Cool />
+        <Audio src={MouseClick} />
       </Sequence>
     </>
   )

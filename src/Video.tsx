@@ -1,13 +1,13 @@
 import { Composition } from 'remotion'
-import { LogoAnimation } from 'compositions/LogoAnimation'
+import { YoutubeIntro } from 'compositions/YoutubeIntro'
 
 export const RemotionVideo: React.FC = () => {
   return (
     <>
       <Composition
-        id="LogoAnimation"
-        component={LogoAnimation}
-        durationInFrames={60 * 10}
+        id="YoutubeIntro"
+        component={YoutubeIntro}
+        durationInFrames={60 * 4}
         fps={60}
         width={1920}
         height={1080}
